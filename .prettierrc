@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        "@prettier/plugin-pug"
+    ],
+
+    "tabWidth": 4,
+    "useTabs": false
+}

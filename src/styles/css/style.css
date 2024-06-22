@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1320px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr;
+    row-gap: 16px;
+    margin: 0 auto;
+}
+
+#fileForm {
+    display: grid;
+    justify-self: center;
+}
+
+#fileForm.hidden {
+    display: none;
+}
+
+#fileForm > div {
+    display: grid;
+    grid-template-columns: 240px;
+    row-gap: 8px;
+    align-self: center;
+}
+
+form > div > button {
+    max-width: 100px;
+}
+
+.wrapper div > button[type='submit'] {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.file-input::before,
+.wrapper div > button[type='submit'] {
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid gray;
+}
+
+.wrapper div > button[type='submit']:hover {
+    background-color: azure;
+}
+
+.input-cnt {
+    display: grid;
+    grid-template-columns: 150px 300px;
+    row-gap: 8px;
+}
+
+.input-cnt > span {
+    align-self: center;
+}
+
+.wrapper div > button {
+    padding: 4px;
+    max-width: 100px;
+}
+
+.file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.file-input::before {
+    content: "Select some files";
+    display: inline-block;
+    background: linear-gradient(to top, #f9f9f9, #e3e3e3);
+    padding: 5px 8px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.file-input:hover::before {
+    background: azure;
+}
+
+.file-input:active::before {
+    background: -webkit-linear-gradient(to top, #e3e3e3, #f9f9f9);
+}
+
+#table > table { 
+    border-collapse: collapse;
+}
+
+#table > table > thead th {
+    text-align: start;
+    border-bottom: 2px solid #000000;
+}
+
+#table > table > tbody td {
+    padding: 3px 8px;
+}
+
+table tr > td.text-center {
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+}

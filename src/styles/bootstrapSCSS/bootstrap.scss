@@ -1,0 +1,89 @@
+@use "sass:map";
+@import "../scss/vars";
+
+@import "../../../node_modules/bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// ===========================Customization==========================
+$enable-validation-icons: false;
+$enable-reduced-motion: false;
+// $form-check-input-checked-bg-color: $custom-light-orange;
+$form-check-input-checked-bg-color: $info;
+
+$custom-colors: (
+  "violet": #7752FE,
+  "light-orange": #FC9918,
+  "custom-orange": #F14A16,
+  "header": #370665,
+  "custom-white": #FBFBFB,
+  "main-background": #35589A
+);
+
+$h7-font-size: $font-size-base * 0.875;
+
+$custom-fonts: (
+7: $font-size-base * 0.875,
+8: $font-size-base * 0.75
+);
+
+$theme-colors: map-merge($theme-colors,  $custom-colors);
+$font-sizes: map-merge($font-sizes,  $custom-fonts);
+
+// ==================================================================
+
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+
+@import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+
+ @import "../../../node_modules/bootstrap/scss/images";
+
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/tables";
+@import "../../../node_modules/bootstrap/scss/forms";
+@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/dropdown";
+
+ @import "../../../node_modules/bootstrap/scss/button-group";
+
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/card";
+@import "../../../node_modules/bootstrap/scss/accordion";
+@import "../../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../../node_modules/bootstrap/scss/pagination";
+
+ @import "../../../node_modules/bootstrap/scss/badge";
+ @import "../../../node_modules/bootstrap/scss/alert";
+ @import "../../../node_modules/bootstrap/scss/progress";
+@import "../../../node_modules/bootstrap/scss/list-group";
+@import "../../../node_modules/bootstrap/scss/close";
+ @import "../../../node_modules/bootstrap/scss/toasts";
+ @import "../../../node_modules/bootstrap/scss/modal";
+ @import "../../../node_modules/bootstrap/scss/tooltip";
+ @import "../../../node_modules/bootstrap/scss/popover";
+ @import "../../../node_modules/bootstrap/scss/carousel";
+ @import "../../../node_modules/bootstrap/scss/spinners";
+ @import "../../../node_modules/bootstrap/scss/offcanvas";
+ @import "../../../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+
+@import "../../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
