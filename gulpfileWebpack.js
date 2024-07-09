@@ -6,6 +6,8 @@ import wpConfigProd from './webpack-gulp.prod.js';
 import wpConfigDev from './webpack-gulp.dev.js';
 import wpConfigBsProd from './webpack-bs-gulp.prod.js';
 import wpConfigBsDev from './webpack-bs-gulp.dev.js';
+import wpConfigTwDev from './webpack-tw.dev.js';
+import wpConfigTwProd from './webpack-tw.prod.js';
 import plumber from 'gulp-plumber';
 import sync from 'browser-sync';
 
@@ -22,6 +24,26 @@ export const webpackDev = () => {
         .pipe(
             webpack(
                 wpConfigDev,
+                wpCompiler
+            )
+        )
+        .pipe(gulp.dest('./templates/'))
+        .pipe(browserSync.stream());
+};
+
+export const webpackTwProd = () => {
+    return gulp.src('./src/script/main.js')
+        .pipe(webpack(wpConfigTwProd))
+        .pipe(gulp.dest('./build/'));
+};
+
+export const webpackTwDev = () => {
+    const browserSync = sync.get('localServer');
+    return gulp.src('./src/script/main.js')
+        .pipe(plumber())
+        .pipe(
+            webpack(
+                wpConfigTwDev,
                 wpCompiler
             )
         )
