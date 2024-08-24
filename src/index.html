@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom multi-select</title>
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- @endif -->
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- @endif -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Gulp5</h1>
+    </div>
+    <!-- @if NODE_ENV='production' -->
+    <script type="module" src="js/main.min.js"></script>
+    <!-- @endif -->
+    <!-- @if NODE_ENV='development' -->
+    <script type="module" src="js/main.js"></script>
+    <!-- @endif -->
+</body>
+
+</html>
